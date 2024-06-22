@@ -1,0 +1,3 @@
+Lecture: security
+
+This lecture was delivered via slides. A link is available on Canvas and pdfs are here  Further readingExtracting Training Data from Large Language Models. Nicholas Carlini, Florian Tramèr, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom B. Brown, D. Song, Ú. Erlingsson, Alina Oprea, Colin Raffel. USENIX Security Symposium 2020.

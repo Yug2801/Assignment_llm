@@ -1,0 +1,47 @@
+better describe these, we highlight three major phases: Preparation (e.g. proposing, designing, implementing,
+
+derisking, etc), Model Training (e.g. running the model, optimizing, identifying and mitigating issues),
+
+and Post-training (e.g. evaluations, studies, paper writing). We also include a set of full-project-lifecycle
+
+contributions.
+
+Preparation
+
+Wrote the initial proposal : Sharan Narang, Alexander Spiridonov, Noah Fiedel, Noam Shazeer, David Luan
+models.
+
+The writing of this report was an experiment: we had over 100 people from different backgrounds
+
+come together to write a single report covering a wide range of aspects of foundation models. A
+
+large part of this report is a survey of existing work, but through many discussions, we have unified
+
+it in one report to highlight all the interdisciplinary connections.
+
+Structure. The report is divided into 26 sections, each discussing one aspect of foundation models.
+While we have sought to capture most of the important topics surrounding foundation models,
+
+this report will inevitably be incomplete, especially as the field evolves quickly. For example, many
+
+applications (e.g., natural sciences, music, finance, agriculture) are not included, though they are as
+
+likely to be affected as the applications we have chosen to discuss. It would also be interesting to
+of the full potential of foundation models, as is envisioned and discussed in detail throughout this
+
+report, will rely on research of new architectural and modeling advances to fulfill these desiderata.On the Opportunities and Risks of Foundation Models 81
+
+4.2 Training
+
+Authors: Alex Tamkin
+
+Training objectives are mathematical functions describing how to transform a model architecture
+
+and large amount of broad data into a foundation model. For example, GPT-3 was trained with
+Computer Laboratory. https://books.google.com/books?id=ZxklAQAAIAAJ176 Center for Research on Foundation Models (CRFM)
+
+Chuang Gan, Jeremy Schwartz, Seth Alter, Martin Schrimpf, James Traer, Julian De Freitas, Jonas Kubilius, Abhishek Bhand-
+
+waldar, Nick Haber, Megumi Sano, Kuno Kim, Elias Wang, Damian Mrowca, Michael Lingelbach, Aidan Curtis, Kevin
+
+Feigelis, Daniel M. Bear, Dan Gutfreund, David Cox, James J. DiCarlo, Josh McDermott, Joshua B. Tenenbaum, and Daniel

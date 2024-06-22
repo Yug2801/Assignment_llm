@@ -1,0 +1,11 @@
+beautifulsoup4
+faiss-cpu
+langchain
+numpy
+pandas
+requests
+tqdm
+transformers
+huggingface-hub
+lxml
+PyPDF2

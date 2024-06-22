@@ -1,0 +1,3 @@
+Lecture: scaling-laws
+
+This lecture was delivered via slides. Powerpoint slides at Canvas and PDFs are available here  Further readingScaling Laws for Neural Language Models. J. Kaplan, Sam McCandlish, T. Henighan, Tom B. Brown, Benjamin Chess, R. Child, Scott Gray, Alec Radford, Jeff Wu, Dario Amodei. 2020.

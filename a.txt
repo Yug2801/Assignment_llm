@@ -1,0 +1,59 @@
+thetensor2tensor library.1Because the use
+
+of Transformers has become common and our im-
+
+plementation is almost identical to the original,
+
+we will omit an exhaustive background descrip-
+
+tion of the model architecture and refer readers to
+
+Vaswani et al. (2017) as well as excellent guides
+
+such as “The Annotated Transformer.”2
+
+In this work, we denote the number of layers
+
+(i.e., Transformer blocks) as L, the hidden size as
+
+H, and the number of self-attention heads as A.3
+Transformer, including dmodel ,dff,dkv, number of heads and number of layers are described,
+
+as well as a less common feature, FFN GEGLU , which refers to a variation of the FFN layer
+
+where the expansion matrix is substituted with two sets of weights which are non-linearly
+
+combined (Shazeer, 2020).
+
+The Switch-C model is designed using only expert-parallelism, and no model-parallelism,
+
+as described earlier in Section 5.4. As a result, the hyper-parameters controlling the width,
+
+22Switch Transformers
+the two sub-layers, followed by layer normalization [ 1]. That is, the output of each sub-layer is
+
+LayerNorm( x+ Sublayer( x)), where Sublayer( x)is the function implemented by the sub-layer
+
+itself. To facilitate these residual connections, all sub-layers in the model, as well as the embedding
+
+layers, produce outputs of dimension dmodel = 512 .
+
+Decoder: The decoder is also composed of a stack of N= 6identical layers. In addition to the two
+block, computing hidden representations in parallel for all input and output positions. In these models,
+
+the number of operations required to relate signals from two arbitrary input or output positions grows
+
+in the distance between positions, linearly for ConvS2S and logarithmically for ByteNet. This makes
+
+it more difficult to learn dependencies between distant positions [ 12]. In the Transformer this is
+
+reduced to a constant number of operations, albeit at the cost of reduced effective resolution due
+distributions. We primarily train decoder-only [LSP+18, RNSS18] Transformer [VSP+17] models, though
+
+we also train LSTM models and Universal Transformers [DGV+18] for comparison.
+
+2.1 Parameter and Compute Scaling of Transformers
+
+We parameterize the Transformer architecture using hyperparameters nlayer (number of layers), dmodel (di-
+
+mension of the residual stream), d(dimension of the intermediate feed-forward layer), dattn(dimension of

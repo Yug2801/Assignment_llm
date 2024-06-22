@@ -1,0 +1,3 @@
+Lecture: lectures
+
+CS324 lecture notes (Winter 2022)As CS324 is a new class, the lecture notes are being constructed on the fly. New content will be added as the quarter progresses.Table of contents Introduction Capabilities Harms I Harms II Data Security Legality Modeling Training Parallelism Scaling laws Selective architectures Adaptation Environmental impact
