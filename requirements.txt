@@ -9,3 +9,7 @@ transformers
 huggingface-hub
 lxml
 PyPDF2
+langchain_community
+tqdm
+streamlit
+torch
