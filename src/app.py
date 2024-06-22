@@ -53,8 +53,8 @@ def main():
     st.title("Question Answering System")
 
     directories = [
-        'E:/Assignment2/data/milestone_papers_text',
-        'E:/Assignment2/data/lecture_notes'
+        'data/milestone_papers_text',
+        'data/lecture_notes'
     ]
 
     # Sidebar - Display directory files
@@ -65,8 +65,6 @@ def main():
         for file in files_list:
             st.sidebar.write(file)
 
-    # Load or preprocess documents
-   
     query = st.text_input('Enter your question:')
     if st.button('Submit'):
         try:
