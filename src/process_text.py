@@ -12,11 +12,11 @@ def process_text_and_query(output_folder, similar_chunks, query):
 
     llm1 = HuggingFaceHub(
         repo_id='meta-llama/Meta-Llama-3-8B-Instruct', 
-        model_kwargs={'temperature': 0.7, 'max_length': 512}
+        model_kwargs={'temperature': 0.6}
     )
 
-    preprocess_prompt = PromptTemplate.from_template("{query}. Write answer of the above question from the below text. {text}. ")
-    analysis_prompt = PromptTemplate.from_template("Analysis the prompt and answer should be clear and complete in 500 token the question is: {query}. ANs answer the question from this give text: {text}")
+    preprocess_prompt = PromptTemplate.from_template("{query}. Write answer of the above question from the below text in one paragraph. {text}. ")
+    analysis_prompt = PromptTemplate.from_template("Analysis the prompt and answer in detail in 100 words the question is: {query}. ANs answer the question from this give text: {text}")
 
     sequential_chain = SequentialChain(
         chains=[

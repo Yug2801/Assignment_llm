@@ -65,6 +65,8 @@ def main():
         for file in files_list:
             st.sidebar.write(file)
 
+    # Load or preprocess documents
+   
     query = st.text_input('Enter your question:')
     if st.button('Submit'):
         try:
