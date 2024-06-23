@@ -1,47 +1,69 @@
-better describe these, we highlight three major phases: Preparation (e.g. proposing, designing, implementing,
+Was any preprocessing, cleaning, or
 
-derisking, etc), Model Training (e.g. running the model, optimizing, identifying and mitigating issues),
+labeling of the data done (e.g., dis-
 
-and Post-training (e.g. evaluations, studies, paper writing). We also include a set of full-project-lifecycle
+cretization or bucketing, tokenization,
 
-contributions.
+part-of-speech tagging, SIFT feature
 
-Preparation
+extraction, removal of instances, pro-
 
-Wrote the initial proposal : Sharan Narang, Alexander Spiridonov, Noah Fiedel, Noam Shazeer, David Luan
-models.
+cessing of missing values)?We remove boilerplate from web pages using proprietary software. We also
 
-The writing of this report was an experiment: we had over 100 people from different backgrounds
+remove HTML markup. We extract conversations using a special-purpose
 
-come together to write a single report covering a wide range of aspects of foundation models. A
+algorithm.
 
-large part of this report is a survey of existing work, but through many discussions, we have unified
+Is the software used to preprocess,
 
-it in one report to highlight all the interdisciplinary connections.
+clean, or label the instances available?No.
 
-Structure. The report is divided into 26 sections, each discussing one aspect of foundation models.
-While we have sought to capture most of the important topics surrounding foundation models,
+Uses
 
-this report will inevitably be incomplete, especially as the field evolves quickly. For example, many
+Has the dataset been used for any
+tokens. So, we were able to split each dataset into a \contaminated" and \clean" subset based on whether at
 
-applications (e.g., natural sciences, music, finance, agriculture) are not included, though they are as
+least 70% of the 8-grams in question, prompt, or target were seen at least once our training data. We report
 
-likely to be affected as the applications we have chosen to discuss. It would also be interesting to
-of the full potential of foundation models, as is envisioned and discussed in detail throughout this
+results on the clean portion vs. the full set in Table 18.
 
-report, will rely on research of new architectural and modeling advances to fulfill these desiderata.On the Opportunities and Risks of Foundation Models 81
+We can see that an equal number of sets have a positive vs. negative accuracy delta on the clean subset,
 
-4.2 Training
+which would imply that data contamination does not cause meaningful in
 
-Authors: Alex Tamkin
+ation of our reported results. Note
+dataset?CompositionWhat do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)?Is any information missing from individual instances?Does the dataset contain data that might be considered confidential?Collection processHow was the data associated with each instance acquired?Who was involved in the data collection process (e.g., students, crowdworkers, contractors) and how were they compensated (e.g., how much were crowdworkers paid)?Were any ethical review
+way it was collected and prepro-
 
-Training objectives are mathematical functions describing how to transform a model architecture
+cessed/cleaned/labeled that might im-
 
-and large amount of broad data into a foundation model. For example, GPT-3 was trained with
-Computer Laboratory. https://books.google.com/books?id=ZxklAQAAIAAJ176 Center for Research on Foundation Models (CRFM)
+pact future uses?The dataset is static in nature and thus will become progressively more
 
-Chuang Gan, Jeremy Schwartz, Seth Alter, Martin Schrimpf, James Traer, Julian De Freitas, Jonas Kubilius, Abhishek Bhand-
+\stale". It will for example not re
 
-waldar, Nick Haber, Megumi Sano, Kuno Kim, Elias Wang, Damian Mrowca, Michael Lingelbach, Aidan Curtis, Kevin
+ect new language and norms that evolve
 
-Feigelis, Daniel M. Bear, Dan Gutfreund, David Cox, James J. DiCarlo, Josh McDermott, Joshua B. Tenenbaum, and Daniel
+over time. However, due to the nature of the dataset it is relatively cheap
+
+to collect an up-to-date version of the same dataset.
+
+Are there tasks for which the dataset
+
+should not be used?This model should not be used for any of the unacceptable language
+tems are better characterized as narrow experts rather than
+
+, **Equal contribution1OpenAI, San Francisco, Califor-
+
+nia, United States. Correspondence to: Alec Radford
+
+<alec@openai.com >.competent generalists. We would like to move towards more
+
+general systems which can perform many tasks – eventually
+
+without the need to manually create and label a training
+
+dataset for each one.
+
+The dominant approach to creating ML systems is to col-
+
+lect a dataset of training examples demonstrating correct

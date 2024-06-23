@@ -3,7 +3,7 @@ from transformers import pipeline
 from langchain.chains import SequentialChain, LLMChain
 from langchain_community.llms import HuggingFaceHub
 from langchain.prompts import PromptTemplate
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 def process_text_and_query(output_folder, similar_chunks, query):
     filename = os.path.join(output_folder, "a.txt")
     text_content=''
@@ -12,7 +12,7 @@ def process_text_and_query(output_folder, similar_chunks, query):
 
     llm1 = HuggingFaceHub(
         repo_id='meta-llama/Meta-Llama-3-8B-Instruct', 
-        model_kwargs={'temperature': 0.6}
+        model_kwargs={'temperature': 0.3,'max_length':987}
     )
 
     preprocess_prompt = PromptTemplate.from_template("{query}. Write answer of the above question from the below text in one paragraph. {text}. ")
