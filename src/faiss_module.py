@@ -9,7 +9,7 @@ import torch
 from transformers import AutoModel, AutoTokenizer
 from sentence_transformers import SentenceTransformer
 # FAISS index for vector search
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 model_name = "sentence-transformers/all-MiniLM-L6-v2"
 model = SentenceTransformer(model_name)

@@ -3,7 +3,7 @@ from transformers import pipeline
 from langchain.chains import SequentialChain, LLMChain
 from langchain_community.llms import HuggingFaceHub
 from langchain.prompts import PromptTemplate
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 def process_text_and_query(output_folder, similar_chunks, query):
     filename = os.path.join(output_folder, "a.txt")
     text_content=''
