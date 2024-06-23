@@ -109,7 +109,7 @@ def main():
                 f.write(chunk + '\n')
 
         response = process_text_and_query(output_folder, similar_chunks, query)
-        response_text = response["analysis"]
+        response_text = response["key_info"]
 
         output_folder = r"E:\Assignment2\notebooks"
         filename = os.path.join(output_folder, "a.txt")
