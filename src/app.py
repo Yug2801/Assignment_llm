@@ -94,7 +94,7 @@ def main():
                 for chunk in similar_chunks:
                     f.write(chunk + '\n')
             response = process_text_and_query(output_folder, similar_chunks, query)
-            response_text = response["key_info"]
+            response_text = response["analysis"]
 
             with open(filename, 'r', encoding='utf-8') as f:
                 text_content = f.read()

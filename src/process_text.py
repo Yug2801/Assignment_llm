@@ -16,7 +16,7 @@ def process_text_and_query(output_folder, similar_chunks, query):
     )
 
     preprocess_prompt = PromptTemplate.from_template("{query}. Write answer of the above question from the below text in one paragraph. {text}. ")
-    analysis_prompt = PromptTemplate.from_template("Analysis the prompt and answer in detail in 100 words the question is: {query}. ANs answer the question from this give text: {text}")
+    analysis_prompt = PromptTemplate.from_template("Analysis the prompt and answer in detail in 100 words the question is: {query}. And answer the question from this give text: {text}")
 
     sequential_chain = SequentialChain(
         chains=[
@@ -24,7 +24,7 @@ def process_text_and_query(output_folder, similar_chunks, query):
             LLMChain(llm=llm1, prompt=analysis_prompt, output_key="analysis")
         ],
         input_variables=["text","query"],
-        output_variables=["key_info"]
+        output_variables=["analysis"]
     )
 
     response = sequential_chain({"text": text_content, "query": query})
