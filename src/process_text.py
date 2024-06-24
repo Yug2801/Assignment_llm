@@ -12,7 +12,7 @@ def process_text_and_query(output_folder, similar_chunks, query):
 
     llm1 = HuggingFaceHub(
         repo_id='meta-llama/Meta-Llama-3-8B-Instruct', 
-        model_kwargs={'temperature': 0.7}
+        model_kwargs={'temperature': 0.7,'max-length':512}
     )
 
     preprocess_prompt = PromptTemplate.from_template("{query}. Write answer of the above question from the below text in one paragraph. {text}. ")
